@@ -1,8 +1,7 @@
-'use strict';
-
-(function(){
+'use strict'; 
+(function(){ 
 	var accordionVanillaJS = function(){
-		var headers = document.getSelectorAll('#accordion-vanillajs h3');
+		var headers = document.querySelectorAll('#accordion-vanillajs h3');
 		var headerClickCallback = function(){
 			this.classList.add('active');
 			for(var i = 0; i < headers.length; i++){
@@ -11,9 +10,22 @@
 				}
 			}
 		};
+		
 		for(var i = 0; i < headers.length; i++){
 			headers[i].addEventListener('click', headerClickCallback);
 		}
 	};
 	accordionVanillaJS();
-})();
+	
+	var accordionJQuery = function(){
+		$('#accordion-jquery h3').click(function(){
+			$(this).addClass('active');
+			$(this).siblings().removeClass('active');
+			//console.log(this);
+		})
+	};
+	
+	accordionJQuery();
+	
+	
+})(); 
