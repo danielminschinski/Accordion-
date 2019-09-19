@@ -10,15 +10,10 @@
 					headers[i].classList.remove('active');
 				}
 			}
+		};
+		for(var i = 0; i < headers.length; i++){
+			headers[i].addEventListener('click', headerClickCallback);
 		}
-	}
-
-
-
-
-
-
-
-
-
+	};
+	accordionVanillaJS();
 })();
