@@ -14,21 +14,28 @@ section {
 
 .accordion {
 	border: 1px solid #bbb;
-
+	
 	h3 {
 		background-color: #ddd;
 		margin: 0;
 		padding: 5px;
 		border: 1px solid #bbb;
 		border-bottom: none;
-		transition: height 0.5s;
-	
+		cursor: pointer;
 
-	&.active {
 		+ div {
-			height: 100px;
-			overflow: auto;
-			}	
+			height: 0;
+			overflow: hidden;
+			border: 1px solid #bbb;
+			border-bottom: none;
+			transition: height 0.5s;
+		}
+
+		&.active {
+			+ div {
+				height: 100px;
+				overflow: auto;
+			}
 		}
 	}
 }
