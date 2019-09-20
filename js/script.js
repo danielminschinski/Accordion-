@@ -1,6 +1,8 @@
 'use strict'; 
+
 (function(){ 
 	var accordionVanillaJS = function(){
+
 		var headers = document.querySelectorAll('#accordion-vanillajs h3');
 		var headerClickCallback = function(){
 			this.classList.add('active');
@@ -17,15 +19,12 @@
 	};
 	accordionVanillaJS();
 	
-	var accordionJQuery = function(){
-		$('#accordion-jquery h3').click(function(){
-			$(this).addClass('active');
-			$(this).siblings().removeClass('active');
-			//console.log(this);
-		})
-	};
-	
+		var accordionJQuery = function(){
+			$('#accordion-jquery h3').click(function () {
+				$(this).addClass('active');
+				$(this).siblings().removeClass('active');
+			})
+		};
 	accordionJQuery();
-	
-	
+
 })(); 
